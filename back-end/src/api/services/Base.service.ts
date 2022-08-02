@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ZodError } from 'zod';
 // import { IModel } from '../interfaces/model.interface';
 
@@ -9,7 +10,8 @@ abstract class Service<T> {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   constructor(protected model: any) {}
 
-  public async create(obj: T): Promise<T | null | ServiceError> {
+  public async create(obj: T): 
+  Promise<T | ServiceError | any> {
     return this.model.create(obj);
   }
 
