@@ -75,7 +75,7 @@ O que foi realizado dentre o proposto:
 - [Chai](https://www.npmjs.com/package/chai)
 - [Sinon](https://sinonjs.org/)
 
-# :goberserk: Etapa mais desafiadora
+# Etapa mais desafiadora
 
 - Utilizar o TypeScript com excelencia e aplicar POO para criar uma aplicação de fácil manutenibilidade e com facilidade para implentar novas features.
 - Realizar regras de negocio para retornar o ranking da competição como esperado.
@@ -96,7 +96,7 @@ O que foi realizado dentre o proposto:
     * `npm install`
   * Inicialize o projeto:
     * Inicialize o seu servidor MySQL
-    * Coloque as suas variáveis de ambiente em um arquivo .env ou diretamente em back-end\src\database\config\config.ts.
+    * Coloque as suas variáveis de ambiente em um arquivo `.env` com base no `.env.example` ou diretamente em back-end\src\database\config\config.ts.
     * Na pasta do back-end execute no seu terminal `npm start` (o back-end começará a rodar na porta 3001, o script irá popular um banco de dados com base nas variáveis de ambiente).
 
 ##  API Documentation
