@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ZodError } from 'zod';
-// import { IModel } from '../interfaces/model.interface';
 
 export interface ServiceError {
   error: ZodError;
