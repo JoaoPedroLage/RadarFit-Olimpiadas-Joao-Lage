@@ -114,12 +114,12 @@ O que foi realizado dentre o proposto:
 ```
    #### Update one item
       
-```http
-  PATCH /competitions/1/finish
-```
-   * Para finalizar uma Competição realizar Patch no endpoint: "http://localhost:3001/competitions/" e inserir o id da competição, depois /finish, exemplo: "http://localhost:3001/competitions/1/finish".
+   * Para finalizar uma Competição realizar Patch no endpoint: "http://localhost:3001/competitions/" e inserir o id da competição, depois /finish.
    
- 
+   ```http
+     PATCH /competitions/1/finish
+   ```
+   
     * o retorno será algo como:
       {
           "message": "Competition successfully finished",
@@ -154,11 +154,6 @@ O que foi realizado dentre o proposto:
 
 # :recycle: Feedback sobre o desafio
 
-- Uma das regras pede para dispor um contador que fica vermelho caso seja extrapolada uma das duas regras da caixa de texto
-(mínimo de 15 e máximo de 200 caracteres), sendo que uma opção do HTML é justamente criar o limite máximo, não deixando ultrapassar. Uma forma que vejo
-para melhorar seria não ter a regra de caracteres máximo, mas ter uma regra de que o botão enviar ficaria desabilitado no caso de passar de 200,
-nesse momento ficaria vermelho o contador. Não é muito funcional, mas seria bom para testar lógica.
-- Outro ponto que gostaria de expor, é que adorei a pergunta na entrevista inicial sobre a nota que eu dava pra cada stack, isso me fez procurar mais sobre bootstrap
-e apliquei nesse desafio.
-- No mais, foi um ótimo desafio. Me fez lembrar muita coisa sobre ReactJs e colocar em prática alguns conhecimentos do NodeJs. Fora que me fez olhar para CSS
-com mais agrado. 
+- A regra de negócio para retornar o ranking da competição foi a parte mais dificil para mim, acredito que com com a ajuda de um Senior Lead eu consegueria realizar essa tarefa com mais destreteza e com muito mais eficiência, continuarei a tentar a solução.
+- Outro ponto que gostaria de expor, é que eu me identifiquei de verdade com a empresa e a proposta de trabalho, como mencionei na entrevista, o que mais prezo em um emprego é um ambiente de trabalho seguro e confortável para eu poder ser o mais produtivo possível, eu sinceramente, senti que a RadarFit passa esse sentimento, desde já agradeço a oportunidade.
+- No mais, foi um ótimo desafio. Coloquei em prática muitos dos meus conhecimentos do NodeJs, TypeScript e POO.
