@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { describe } from 'mocha';
 
 import Sinon from 'sinon';
-import competitionModel, { competitionDocument } from '../../../models/competitionModel';
+import competitionModel from '../../api/models/CompetitionResults.model';
 
 const functions = {
   create: Sinon.stub().resolves(),
@@ -16,8 +16,8 @@ const functions = {
 describe('Model', () => {
   const modelStub = () => functions;
 
-  const model = new competitionModel(
-    modelStub() as unknown as Model<competitionDocument, {}, {}, {}>,
+  const model = new competitionModel<Types>(
+    modelStub() as unknown as Model
   );
 
   it('exist', () => {
@@ -36,13 +36,10 @@ describe('Model', () => {
     const id = '123456789';
 
     const validcompetition = {
-      _id: new Types.ObjectId(),
-      model: 'Uno da Escada',
-      year: 1963,
-      color: 'red',
-      buyValue: 3500,
-      seatsQty: 2,
-      doorsQty: 2,
+        competition_name: "competição hidratacao",
+        athelete_name: "Claudio", 
+        value: 10, 
+        unit: "ml"
     };
 
     it('create', async () => {

@@ -1,8 +1,8 @@
 import { Types } from 'mysql';
 import { expect } from 'chai';
 import Sinon from 'sinon';
-import competitionModel from '../../../models/competitionModel';
-import competitionService from '../../../services/competitionService';
+import competitionModel from '../../../src/api/models/CompetitionResults.model';
+import competitionService from '../../../src/api/services/Competition.service';
 
 describe('Test competitionService', () => {
   const competitionModel = new competitionModel();
@@ -10,13 +10,10 @@ describe('Test competitionService', () => {
 
   describe('Test the creation of a new competition with the correct data', () => {
     const validcompetitionMock = {
-      _id: new Types.ObjectId(),
-      model: 'Uno da Escada',
-      year: 1963,
-      color: 'red',
-      buyValue: 3500,
-      seatsQty: 2,
-      doorsQty: 2,
+        competition_name: "competição hidratacao",
+        athelete_name: "Claudio", 
+        value: 10, 
+        unit: "ml"
     };
     
     before(() => {
@@ -36,12 +33,10 @@ describe('Test competitionService', () => {
     it('Tests if the returned object has the expected data', async () => {
       const competitionCreated = await competitionService.create(validcompetitionMock);
   
-      expect(competitionCreated).to.have.property('model');
-      expect(competitionCreated).to.have.property('year');
-      expect(competitionCreated).to.have.property('color');
-      expect(competitionCreated).to.have.property('buyValue');
-      expect(competitionCreated).to.have.property('seatsQty');
-      expect(competitionCreated).to.have.property('doorsQty');
+      expect(competitionCreated.body).to.have.property('competition_name');
+      expect(competitionCreated.body).to.have.property('athelete_name');
+      expect(competitionCreated.body).to.have.property('value');
+      expect(competitionCreated.body).to.have.property('unit');
     });
   });
 });
