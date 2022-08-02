@@ -25,8 +25,8 @@ por João Lage
 # :camera: Imagens do projeto
 
 <spam>
-  <img src="" alt="Tela primária" width="400"/>
-  <img src="" alt="Tela resultado" width="400"/>
+  <img src="https://im.ge/i/FAbI7W" alt="ranking" width="1000"/>
+  <img src="https://im.ge/i/FAbI7Whttps://im.ge/i/FAb06L" alt="Cadastro de resultados de competições" width="1000"/>
 </spam>
 
 # :man_dancing: Descrição do Projeto
@@ -53,7 +53,7 @@ O que foi realizado dentre o proposto:
 - [x] A API pode retorna o ranking/resultado parcial, caso a disputa ainda não estiver encerrada.
 - [x] Os rankings consideraram as unidades.
 - [ ] No lançamento de dardos, cada atleta tem 3 chances, o resultado da competição leva em conta o lançamento mais distante de cada atleta.
-- [ ] Testes.
+- [x] Testes.
 
 # :construction: Melhorias possíveis:
 
@@ -77,8 +77,9 @@ O que foi realizado dentre o proposto:
 
 # :goberserk: Etapa mais desafiadora
 
-- Relembrar o React foi bem desafiador, porém, acredito que mais desafiador ainda foi conectar o front com o back. Ainda não tinha feito algo do tipo e vários problemas surgiram, um deles foi a falta do CORS no backend, mesmo depois de configurar o AXIOS no front, ficava retornando erro e demorou um tempo para perceber o motivo.
-- Pontuando um outro desafio foi começar um projeto full stack do zero, mas foi incrível perceber que as lembranças fluíam de forma natural no desenrolar do desafio.
+- Utilizar o TypeScript com excelencia e aplicar POO para criar uma aplicação de fácil manutenibilidade e com facilidade para implentar novas features.
+- Realizar regras de negocio para retornar o ranking da competição como esperado.
+- Pontuando um outro desafio foi começar um projeto back-end do zero, mas foi incrível perceber que sou capaz de contruir uma API em um prazo tão curto.
 
 # 🛠️ Abrir e rodar o projeto
 
