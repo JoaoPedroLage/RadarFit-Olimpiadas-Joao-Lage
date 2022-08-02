@@ -25,8 +25,8 @@ por João Lage
 # :camera: Imagens do projeto
 
 <spam>
-  <img src="https://github.com/williamnstolb/desafioGRX/blob/master/app/Images/TelaPrincipal.png" alt="Tela primária" width="400"/>
-  <img src="https://github.com/williamnstolb/desafioGRX/blob/master/app/Images/TelaResultados.png" alt="Tela resultado" width="400"/>
+  <img src="" alt="Tela primária" width="400"/>
+  <img src="" alt="Tela resultado" width="400"/>
 </spam>
 
 # :man_dancing: Descrição do Projeto
@@ -99,14 +99,15 @@ O que foi realizado dentre o proposto:
     * Na pasta do back-end execute no seu terminal `npm start` (o back-end começará a rodar na porta 3001, o script irá popular um banco de dados com base nas variáveis de ambiente).
 
 3. Endpoints e atributos das tabelas do banco de dados
-   Para cadastrar uma nova Competição realizar Post no endpoint: "http://localhost:3001/competitions", insira os dados de acordo com esse exemplo:
+  * Para cadastrar uma nova Competição realizar Post no endpoint: "http://localhost:3001/competitions", insira os dados de acordo com esse exemplo:
    {
         "competition_name": "competição yoga",
    },
    
-   Para finalizar uma Competição realizar Patch no endpoint: "http://localhost:3001/competitions/" e inserir o id da competição, depois /finish, exemplo: "http://localhost:3001/competitions/1/finish".
+   * Para finalizar uma Competição realizar Patch no endpoint: "http://localhost:3001/competitions/" e inserir o id da competição, depois /finish, exemplo: "http://localhost:3001/competitions/1/finish".
    
-   o retorno será algo como:
+ 
+    * o retorno será algo como:
       {
           "message": "Competition successfully finished",
           "competition": {
@@ -114,17 +115,17 @@ O que foi realizado dentre o proposto:
               "competition_name": "competição yoga",
               "in_progress": false
           }
-      }
+       }
    
-   Para cadastrar resultados de uma nova Competição no endpoint: "http://localhost:3001/competitions_results", insira os dados de acordo com esse exemplo:
-   {
+      *Para cadastrar resultados de uma nova Competição no endpoint: "http://localhost:3001/competitions_results", insira os dados de acordo com esse exemplo:
+      {
         "competition_name": "competição yoga",
         "athelete_name": "Joao das Neves",
         "value": 10,
         "unit": "s"
-    },
+      },
     
-    Para ver o ranking realizar Get no endpoint: "http://localhost:3001/ranking", o retorno será algo como::
+    * Para ver o ranking realizar Get no endpoint: "http://localhost:3001/ranking", o retorno será algo como:
     [
         {
             "competition_name": "competição yoga",
