@@ -25,8 +25,8 @@ por João Lage
 # :camera: Imagens do projeto
 
 <spam>
-  <img src="https://im.ge/i/Screenshot-6-.FAbI7W" alt="ranking" width="1000"/>
-  <img src="https://im.ge/i/Screenshot-7-.FAb06L" alt="Cadastro de resultados de competições" width="1000"/>
+  <img src="/images/ranking.png" alt="ranking" width="1000"/>
+  <img src="/images/competitions_results.png" alt="Cadastro de resultados de competições" width="1000"/>
 </spam>
 
 # :man_dancing: Descrição do Projeto
