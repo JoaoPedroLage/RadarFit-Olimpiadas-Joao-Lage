@@ -1,7 +1,7 @@
 import { Model, INTEGER, STRING } from 'sequelize';
 import db from '.';
 
-class Points extends Model {
+class CompetitionResults extends Model {
   public id!: number;
 
   public value!: number;
@@ -13,7 +13,7 @@ class Points extends Model {
   public atheleteName!: string;
 }
 
-Points.init({
+CompetitionResults.init({
   id: {
     type: INTEGER,
     allowNull: false,
@@ -44,4 +44,4 @@ Points.init({
   timestamps: false,
 });
 
-export default Points;
+export default CompetitionResults;
