@@ -2,6 +2,9 @@ import { Model, INTEGER, STRING, BOOLEAN } from 'sequelize';
 import db from '.';
 
 class Competitions extends Model {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [x: string]: any;
+
   public id!: number;
 
   public competitionName!: string;
