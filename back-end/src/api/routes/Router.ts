@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Router } from 'express';
 import Controller from '../controllers/Base.controller';
 
@@ -8,7 +9,10 @@ class CustomRouter<T> {
     this.router = Router();
   }
 
-  public addRoute(controller: Controller<T>, route: string = controller.route) {
+  public addRoute(
+    controller: Controller<T> | any,
+    route: string = controller.route,
+  ) {
     this.router.get(route, controller.findAll);
     this.router.get(`${route}/:id`, controller.findByPk);
     this.router.post(route, controller.create);
