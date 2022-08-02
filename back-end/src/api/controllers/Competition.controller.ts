@@ -3,7 +3,7 @@ import Controller, { RequestWithBody, ResponseError } from './Base.controller';
 import CompetitionService from '../services/Competition.service';
 import { Competition } from '../interfaces/competition.interface';
 
-class CompeititionController extends Controller<Competition> {
+class CompetitionController extends Controller<Competition> {
   private $route: string;
 
   constructor(
@@ -120,4 +120,4 @@ class CompeititionController extends Controller<Competition> {
   };
 }
 
-export default CompeititionController;
+export default CompetitionController;

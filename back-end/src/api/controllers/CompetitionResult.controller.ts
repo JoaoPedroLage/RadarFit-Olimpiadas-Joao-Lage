@@ -1,14 +1,16 @@
+/* eslint-disable complexity */
+/* eslint-disable sonarjs/cognitive-complexity */
 import { Request, Response } from 'express';
 import Controller, { RequestWithBody, ResponseError } from './Base.controller';
-import CompetitionResultService from '../services/Competition.service';
-import { Competition } from '../interfaces/competition.interface';
+import CompetitionResultService from '../services/CompetitionResult.service';
+import { CompetitionResult } from '../interfaces/competitionResult.interface';
 
-class CompeititionController extends Controller<Competition> {
+class CompetitionResultsController extends Controller<CompetitionResult> {
   private $route: string;
 
   constructor(
     service = new CompetitionResultService(),
-    route = '/competition',
+    route = '/competitions_results',
   ) {
     super(service);
     this.$route = route; 
@@ -19,13 +21,31 @@ class CompeititionController extends Controller<Competition> {
   }
 
   create = async (
-    req: RequestWithBody<Competition>,
-    res: Response<Competition | ResponseError>,
+    req: RequestWithBody<CompetitionResult>,
+    res: Response<CompetitionResult | ResponseError>,
   ): Promise<typeof res> => {
     const { body } = req;
 
     try {
       const competitionResult = await this.service.create(body);
+
+      if (competitionResult.error === 'competition not created') {
+        return res.status(404).json(
+          { error: 'competition not created' },
+        );
+      }
+      
+      if (competitionResult === false) {
+        return res.status(404).json(
+          { error: 'competition finished' },
+        );
+      }
+
+      if (competitionResult === null) {
+        return res.status(404).json(
+          { error: 'competition result already exists' },
+        );
+      }
 
       if (!competitionResult) {
         return res.status(500).json({ error: this.errors.internal });
@@ -45,7 +65,7 @@ class CompeititionController extends Controller<Competition> {
 
   findByPk = async (
     req: Request<{ id: string }>,
-    res: Response<Competition | ResponseError>,
+    res: Response<CompetitionResult | ResponseError>,
   ): Promise<typeof res> => {
     const { id } = req.params;
 
@@ -66,7 +86,7 @@ class CompeititionController extends Controller<Competition> {
 
   update = async (
     req: Request<{ id: string }>,
-    res: Response<Competition | ResponseError>,
+    res: Response<CompetitionResult | ResponseError>,
   ): Promise<typeof res> => {
     const { id } = req.params;
 
@@ -91,7 +111,7 @@ class CompeititionController extends Controller<Competition> {
 
   destroy = async (
     req: Request<{ id: string }>,
-    res: Response<Competition | ResponseError>,
+    res: Response<CompetitionResult | ResponseError>,
   ): Promise<typeof res> => {
     const { id } = req.params;
 
@@ -113,4 +133,4 @@ class CompeititionController extends Controller<Competition> {
   };
 }
 
-export default CompeititionController;
+export default CompetitionResultsController;
