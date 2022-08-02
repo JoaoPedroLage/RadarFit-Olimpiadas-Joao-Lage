@@ -99,12 +99,24 @@ O que foi realizado dentre o proposto:
     * Coloque as suas variáveis de ambiente em um arquivo .env ou diretamente em back-end\src\database\config\config.ts.
     * Na pasta do back-end execute no seu terminal `npm start` (o back-end começará a rodar na porta 3001, o script irá popular um banco de dados com base nas variáveis de ambiente).
 
-3. Endpoints e atributos das tabelas do banco de dados
+##  API Documentation
+   . Endpoints e atributos das tabelas do banco de dados
+   
+   #### Create the item
+
   * Para cadastrar uma nova Competição realizar Post no endpoint: "http://localhost:3001/competitions", insira os dados de acordo com esse exemplo:
    {
         "competition_name": "competição yoga",
    },
    
+```http
+  POST /competitions/
+```
+   #### Update one item
+      
+```http
+  PATCH /competitions/1/finish
+```
    * Para finalizar uma Competição realizar Patch no endpoint: "http://localhost:3001/competitions/" e inserir o id da competição, depois /finish, exemplo: "http://localhost:3001/competitions/1/finish".
    
  
