@@ -25,8 +25,8 @@ por João Lage
 # :camera: Imagens do projeto
 
 <spam>
-  <img src="https://im.ge/i/FAbI7W" alt="ranking" width="1000"/>
-  <img src="https://im.ge/i/FAbI7Whttps://im.ge/i/FAb06L" alt="Cadastro de resultados de competições" width="1000"/>
+  <img src="https://im.ge/i/Screenshot-6-.FAbI7W" alt="ranking" width="1000"/>
+  <img src="https://im.ge/i/Screenshot-7-.FAb06L" alt="Cadastro de resultados de competições" width="1000"/>
 </spam>
 
 # :man_dancing: Descrição do Projeto
@@ -130,7 +130,8 @@ O que foi realizado dentre o proposto:
           }
        }
    
-      *Para cadastrar resultados de uma nova Competição no endpoint: "http://localhost:3001/competitions_results", insira os dados de acordo com esse exemplo:
+      *Para cadastrar resultados de uma nova Competição realizar Post no endpoint: "http://localhost:3001/competitions_results",
+      insira os dados de acordo com esse exemplo:
       {
         "competition_name": "competição yoga",
         "athelete_name": "Joao das Neves",
