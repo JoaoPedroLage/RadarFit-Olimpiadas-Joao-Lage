@@ -99,11 +99,11 @@ O que foi realizado dentre o proposto:
     * Coloque as suas variáveis de ambiente em um arquivo `.env` com base no `.env.example` e `também diretamente em back-end\src\database\config\config.ts`.
     * Na pasta do back-end execute no seu terminal `npm start` (o back-end começará a rodar na porta 3001, o script irá popular um banco de dados com base nas variáveis de ambiente).
     * Caso o `npm start` não rode corretamente, siga com seguintes comandos:
-   `npx -y tsc`
-   `npx sequelize-cli db:drop`
-   `npx sequelize-cli db:create`
-   `npx sequelize-cli db:migrate`
-   `ts-node-dev src/api/index.ts`
+  * `npx -y tsc`
+  * `npx sequelize-cli db:drop`
+  * `npx sequelize-cli db:create`
+  * `npx sequelize-cli db:migrate`
+  * `ts-node-dev src/api/index.ts`
 
 ##  API Documentation
    . Endpoints e atributos das tabelas do banco de dados
