@@ -2,6 +2,8 @@ import { Model, INTEGER, STRING } from 'sequelize';
 import db from '.';
 
 class CompetitionResults extends Model {
+  [x: string]: unknown;
+
   public id!: number;
 
   public value!: number;

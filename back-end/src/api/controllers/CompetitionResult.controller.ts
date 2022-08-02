@@ -29,7 +29,7 @@ class CompetitionResultsController extends Controller<CompetitionResult> {
     try {
       const competitionResult = await this.service.create(body);
 
-      if (competitionResult.error === 'competition not created') {
+      if (competitionResult.error === 'competition not created yet') {
         return res.status(404).json(
           { error: 'competition not created' },
         );
@@ -38,12 +38,6 @@ class CompetitionResultsController extends Controller<CompetitionResult> {
       if (competitionResult === false) {
         return res.status(404).json(
           { error: 'competition finished' },
-        );
-      }
-
-      if (competitionResult === null) {
-        return res.status(404).json(
-          { error: 'competition result already exists' },
         );
       }
 

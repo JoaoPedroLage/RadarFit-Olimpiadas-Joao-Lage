@@ -25,12 +25,6 @@ class CompetitionService extends Service<CompetitionResult> {
       return false;
     }
 
-    const competitionResultExists = await this.model.findOne({ where: { competition_name: obj.competition_name } });
-
-    if (competitionResultExists) {
-      return null;
-    }
-
     return this.model.create(obj);
   }
 
